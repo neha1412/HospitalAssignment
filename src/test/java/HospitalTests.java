@@ -1,12 +1,11 @@
-package HospitalAssignment;
-
+import HospitalAssignment.Hospital;
+import HospitalAssignment.Patients;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class HospitalTests {
