@@ -1,18 +1,16 @@
 package HospitalAssignment;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
 
 public class VisitDate {
 
-    LocalDate date ;
+    LocalDate dateOfVisit;
 
-    public LocalDate getDate() {
-        return this.date;
+    public LocalDate getDateOfVisit() {
+        return this.dateOfVisit;
     }
 
     public VisitDate(LocalDate date) {
-        this.date = date;
+        this.dateOfVisit = date;
     }
 }

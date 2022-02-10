@@ -1,10 +1,16 @@
 package HospitalAssignment;
 
+import lombok.Builder;
+import lombok.Getter;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+
+@Getter
+@Builder
 
 public class Patients {
 
@@ -18,14 +24,6 @@ public class Patients {
         visitDate = new ArrayList<LocalDate>();
     }
 
-    public String getPatientName() {
-        return patientName;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
     public List<LocalDate> addVisits(LocalDate... visitDates) {
         for (LocalDate date : visitDates) {
             visitDate.add(date);
@@ -34,7 +32,7 @@ public class Patients {
     }
 
     public List<LocalDate> getvisitDate() {
-            return visitDate.stream().filter(VisitDate -> VisitDate.getDate()).collect(Collectors.toList());
+            return visitDate.stream().filter(VisitDate->VisitDate.getDateOfVisit()).collect(Collectors.toList());
 
         }
 
